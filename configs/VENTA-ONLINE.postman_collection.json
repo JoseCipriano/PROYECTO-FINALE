@@ -1,0 +1,663 @@
+{
+	"info": {
+		"_postman_id": "51cd3f63-91ca-43b1-977c-71293064e2d6",
+		"name": "VENTA-ONLINE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42728066"
+	},
+	"item": [
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Login-Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"tirocnarco@gmail.com\",\r\n  \"password\": \"12345678\"\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login-Admin",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Edit-User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMDcyNDEsImV4cCI6MTc0MTMxMDg0MX0.16KpxFTHan3oBo9IeukAh_zrcR-l2mFDKdWwHPjHpTs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"1fd\",\r\n    \"surname\": \"Dionicio\",\r\n    \"username\": \"maacegh13\",\r\n    \"email\": \"marceagi@gmailcom\",\r\n    \"phone\": \"12457898\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/users/67c21ead3b7f8b5a52cd1d41",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"users",
+								"67c21ead3b7f8b5a52cd1d41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit-Role",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMDUyODAsImV4cCI6MTc0MTMwODg4MH0.uRBHkTblxCsW2P6oJuQiVQXrpyyma8SIL11mog23u_w",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-User",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCTS",
+			"item": [
+				{
+					"name": "Add-Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMTc4NDcsImV4cCI6MTc0MTMyMTQ0N30.K1wiJuBA6r790844tKnxnTJxEbOPwseT4nC0-way7XE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameProduct\":\"blakcink\",\r\n    \"descriptionProduct\": \"albumof the year\",\r\n    \"price\": \"15\",\r\n    \"stock\": \"8\",\r\n    \"nameCategory\": \"hj\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-ProductByName",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token ",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMTc4NDcsImV4cCI6MTc0MTMyMTQ0N30.K1wiJuBA6r790844tKnxnTJxEbOPwseT4nC0-way7XE",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "Products-Catalog",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Product-Category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Product-Stock",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMjExMzEsImV4cCI6MTc0MTMyNDczMX0.VyMvtB_KMGBlpIcKhtjdr_Gdz30WRkXh4QCbfDg1OXs",
+								"type": "text"
+							}
+						]
+					},
+					"response": []
+				},
+				{
+					"name": "UpDate-Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMjI5OTgsImV4cCI6MTc0MTMyNjU5OH0.l8QyyCe4K3S7FkVyK48ujpwAZr9_zVEIxVFsOG5PJ8c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameProduct\" : \"Niño\",\r\n    \"descriptionProduct\" : \"juqguete\",\r\n    \"price\" : \"100.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/product/updateProduct/67ca6829c8d9b20a6ac32615",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"product",
+								"updateProduct",
+								"67ca6829c8d9b20a6ac32615"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMjI5OTgsImV4cCI6MTc0MTMyNjU5OH0.l8QyyCe4K3S7FkVyK48ujpwAZr9_zVEIxVFsOG5PJ8c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/product/deleteProduct/67ca6829c8d9b20a6ac32615",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"product",
+								"deleteProduct",
+								"67ca6829c8d9b20a6ac32615"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATEGORYS",
+			"item": [
+				{
+					"name": "Add-Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMTc4NDcsImV4cCI6MTc0MTMyMTQ0N30.K1wiJuBA6r790844tKnxnTJxEbOPwseT4nC0-way7XE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameCategory\":\"Lacteos\",\r\n    \"descriptionCategory\":\"Todo lo relacionado con Lacteos\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/category/addCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List-Category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMTA5MjgsImV4cCI6MTc0MTMxNDUyOH0.usopLeLp6NRTJTHxNaNhWx96SDnJnnDzS-KKm58RTmI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/category/addCategory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"category",
+								"addCategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpDate-Category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzMTA5MjgsImV4cCI6MTc0MTMxNDUyOH0.usopLeLp6NRTJTHxNaNhWx96SDnJnnDzS-KKm58RTmI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/category/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CART",
+			"item": [
+				{
+					"name": "Agregar-Cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzODE0MTgsImV4cCI6MTc0MTM4NTAxOH0.MYSZs4lACTlwai6IQWybA06q4vldOkCsganMAYoorUI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameProduct\": \"ALTER-EGO\",\r\n    \"quantity\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/cart/addProductCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"cart",
+								"addProductCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List-Cart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjI3NmVlMzE3YTAzY2ExYjY3MmEiLCJpYXQiOjE3NDEzODIyOTQsImV4cCI6MTc0MTM4NTg5NH0.9AsLGE6SuERFM37Fse-dj0NZgmw-1Qu1SKfqqmP6Uwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzODE0MTgsImV4cCI6MTc0MTM4NTAxOH0.MYSZs4lACTlwai6IQWybA06q4vldOkCsganMAYoorUI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameProduct\" : \"ALTER-EGO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/cart/deleteProductCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"cart",
+								"deleteProductCart"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BUY",
+			"item": [
+				{
+					"name": "Complete-Buy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjI3NmVlMzE3YTAzY2ExYjY3MmEiLCJpYXQiOjE3NDEzODY0ODgsImV4cCI6MTc0MTM5MDA4OH0.fNJbSV8wKInuxDkHC11OcCpQ5A4PQfHBOHSAUEsBXjc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/buys/completeBuy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"buys",
+								"completeBuy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History-Buy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjI3NmVlMzE3YTAzY2ExYjY3MmEiLCJpYXQiOjE3NDEzODY0ODgsImV4cCI6MTc0MTM5MDA4OH0.fNJbSV8wKInuxDkHC11OcCpQ5A4PQfHBOHSAUEsBXjc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/buys/historyBuy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"buys",
+								"historyBuy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INVOICE",
+			"item": [
+				{
+					"name": "Update-Invoice",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NhMzE3ZmRkMjc4Nzc3MmZmM2UwNTYiLCJpYXQiOjE3NDEzODc1NzYsImV4cCI6MTc0MTM5MTE3Nn0.dL0Sx77NYIna4U0tvbDo0MI8wdFHl-JXujmWlwjaIfY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"products\":[\r\n        {\r\n            \"nameProduct\":\"ALTER-EGO\",\r\n            \"quantity\": 2,\r\n            \"price\":\"100\"\r\n        } \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/invoice/updateInvoice/67cb73680d6addd2c9ffb040",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"invoice",
+								"updateInvoice",
+								"67cb73680d6addd2c9ffb040"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List-Invoices",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjI3NmVlMzE3YTAzY2ExYjY3MmEiLCJpYXQiOjE3NDEzODc5ODksImV4cCI6MTc0MTM5MTU4OX0.Dl_FmZOMyllxxEKR559lMz1s72G-4TvZFmz5kkj1KIM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/ventaOnline/v1/invoice/invoices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"invoice",
+								"invoices"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
